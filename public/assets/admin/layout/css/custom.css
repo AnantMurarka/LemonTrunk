@@ -1,0 +1,84 @@
+/* here you can put your own css to customize and override the theme */
+input {
+	border-radius: 5px !important;
+}
+
+button {
+	border-radius: 5px !important;
+}
+
+.btn .default {
+	border: solid 1px #333 !important;
+}
+
+.caption, .tools{
+	color:#333 !important;
+}
+
+.padding5
+{
+	padding: 5px;
+}
+
+.padding10
+{
+	padding: 10px;
+}
+
+.padding15
+{
+	padding: 15px;
+}
+
+.radius-buttom
+{
+	border-bottom-left-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+}
+
+.radius-top
+{
+	border-top-left-radius: 5px !important;
+	border-top-right-radius: 5px !important;
+}
+
+.radius-top-left
+{
+	border-top-left-radius: 5px !important;
+}
+
+.radius-top-right
+{
+	border-top-right-radius: 5px !important;
+}
+
+.radius {
+	border-radius: 5px !important;
+}
+
+.tab-content
+{
+	background: #FFFFFF !important;
+}
+.page-content {
+	background: #e9eaed;
+}
+
+.page-header.navbar {
+/*	background-color: #d84a38;
+	border-top: 5px solid #d84a38;
+	border-bottom: 5px solid #d84a38;
+	height: 56px;*/
+}
+
+.Advetisements {
+    margin-top: 20px;
+}
+
+ @media (max-width: 768px) {
+	.Advetisements,
+	.Advetisements-classic 
+	{
+	  margin-top: 0;
+  	}
+}

@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Asia/Singapore',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,9 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'xFcWlSnXYqwLgjJTqpGJ1HkddiXeWnZa',
-
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'key' => 'YourSecretKey!!!',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -96,7 +94,8 @@ return array(
 	'providers' => array(
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Illuminate\Auth\AuthServiceProvider',
+		// 'Illuminate\Auth\AuthServiceProvider',
+		'Ollieread\Multiauth\MultiauthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Session\CommandsServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
@@ -121,6 +120,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Artdarek\OAuth\OAuthServiceProvider',
+		'Chumper\Datatable\DatatableServiceProvider'
 
 	),
 
@@ -182,12 +183,13 @@ return array(
 		'Schema'          => 'Illuminate\Support\Facades\Schema',
 		'Seeder'          => 'Illuminate\Database\Seeder',
 		'Session'         => 'Illuminate\Support\Facades\Session',
-		'SoftDeletingTrait' => 'Illuminate\Database\Eloquent\SoftDeletingTrait',
 		'SSH'             => 'Illuminate\Support\Facades\SSH',
 		'Str'             => 'Illuminate\Support\Str',
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'OAuth' 		  => 'Artdarek\OAuth\Facade\OAuth',
+		'Datatable' 	  => 'Chumper\Datatable\Facades\DatatableFacade',
 
 	),
 

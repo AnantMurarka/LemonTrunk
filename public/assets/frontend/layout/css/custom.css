@@ -1,0 +1,43 @@
+/* here you can put your own css to customize and override the theme */
+
+.carousel-inner .item img {
+	border-radius: 0px !important;
+}
+input {
+	border-radius: 5px !important;
+}
+
+button {
+	border-radius: 5px !important;
+}
+
+.radius-buttom
+{
+	border-bottom-left-radius: 5px !important;
+	border-bottom-right-radius: 5px !important;
+
+}
+
+.radius {
+	border-radius: 5px !important;
+}
+.tab-content
+{
+	background: #FFFFFF !important;
+	
+}
+
+.padding5
+{
+	padding: 5px;
+}
+
+.padding10
+{
+	padding: 10px;
+}
+
+.padding15
+{
+	padding: 15px;
+}
