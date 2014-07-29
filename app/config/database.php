@@ -55,9 +55,9 @@ return array(
     		    'host' => 'localhost'
     		),
 			'driver'    => 'mysql',
-			'database'  => 'tekno_projectdocdb',
-			'username'  => 'root',
-			'password'  => 'mysql',
+			'database'  => 'leafcoff_docsearch',
+			'username'  => 'leafcoff_dbtest',
+			'password'  => 'LKClkc062',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
