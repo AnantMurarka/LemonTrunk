@@ -45,16 +45,9 @@ return array(
 	*/
 
 	'connections' => array(
-
-
 		'mysql' => array(
-			'read' => array(
-    		'host' => 'localhost',
-    		),
-    		'write' => array(
-    		    'host' => 'localhost'
-    		),
 			'driver'    => 'mysql',
+			'host' => 'localhost',
 			'database'  => 'leafcoff_docsearch',
 			'username'  => 'leafcoff_dbtest',
 			'password'  => 'LKClkc062',
@@ -62,7 +55,6 @@ return array(
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
 		)
-
 	),
 
 	/*

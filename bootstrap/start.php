@@ -26,7 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
+	'local' 		=> array('Leans-Macbook-Pro.local'),
+	'production'    => array('http://dev.teknolohiya.ph/docsearch/public'),
 
 ));
 
