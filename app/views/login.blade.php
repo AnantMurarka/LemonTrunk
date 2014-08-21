@@ -61,9 +61,9 @@
 	{{ Form::open(array('action' => 'LoginController@loginWithDocSearch','class'=>'login-form', 'method'=>'post')) }}
 		<h3 class="form-title">Login to your account</h3>
 		<?php
-			foreach ($errors as $error) {
-				echo '<li><a>' . $error . '</a></li>';
-			}
+			// if (isset($errors)) {
+			// 	echo '<li><a>' . $errors . '</a></li>';
+			// }
 		?>
 		<div class="alert alert-danger display-hide">
 			<button class="close" data-close="alert"></button>
@@ -134,7 +134,16 @@
 		<div class="form-group">
 			<div class="input-icon">
 				<i class="fa fa-envelope"></i>
-				<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email"/>
+				<?php 
+				if(isset($email))
+				{
+					echo '<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" value="{{$email}}"/>';
+				}
+				else
+				{
+					echo '<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email"/>';
+				}
+				?>
 			</div>
 		</div>
 		<div class="form-actions">

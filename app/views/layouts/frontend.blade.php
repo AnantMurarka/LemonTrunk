@@ -22,9 +22,12 @@ License: You must have a valid license purchased only from themeforest(the above
  	<title>{{ $appTitle }}.com</title>	
  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
- 	<meta content="Metronic Shop UI description" name="description">
- 	<meta content="Metronic Shop UI keywords" name="keywords">
- 	<meta content="keenthemes" name="author">	
+ 	<meta content="Medzoc" name="title">
+  <meta content="Medical care search engine and booking" name="description">
+ 	<meta content="Doctor Search" name="keywords">
+  <meta content="Hospital Search" name="keywords">
+  <meta content="Booking Search" name="keywords">
+ 	<meta content="teknolohiya.ph" name="author">	
  	<meta property="og:site_name" content="-CUSTOMER VALUE-">
  	<meta property="og:title" content="-CUSTOMER VALUE-">
  	<meta property="og:description" content="-CUSTOMER VALUE-">

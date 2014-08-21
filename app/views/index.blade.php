@@ -49,7 +49,7 @@
 					<div class="col-md-7">
 						<!-- BEGIN REGISTRATION FORM -->
 						<form class="register-form" action="index.html" method="post">
-							<h3>Search for the nearest Clinic and Doctors</h3>
+							<h1>Search for the nearest Clinic and Doctors</h1>
 	
 							<div class="form-group">
 								<div class="input-icon">
@@ -427,19 +427,8 @@
             Layout.init();    
             Layout.initOWL();
             RevosliderInit.initRevoSlider();
-            // Layout.initTwitter();
-
-
-            //Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
-            //Layout.initNavScrolling(); 
         });
         
-    </script>
-
-    <script>
-        jQuery(document).ready(function() {     
-          
-        });
     </script>
 	<!-- END JAVASCRIPTS -->
 @stop

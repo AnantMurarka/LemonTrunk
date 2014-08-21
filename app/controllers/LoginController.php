@@ -6,7 +6,7 @@ class LoginController extends BaseController {
 	/* Login with Docsearch */
 	public function loginWithDocSearch()
 	{
-
+        
 		$input = Input::all();
 		$rules = array(	'email' 	=> 'required', 
 						'password' 	=> 'required' );
@@ -70,7 +70,7 @@ class LoginController extends BaseController {
 			}
             else
             {
-                return Redirect::to('login')->withErrors('Incorrect Email or Password');
+                return Redirect::back()->with('errors', 'Incorrect Email or Password')->with('email', $input['email']);
             }
 			
 		}
