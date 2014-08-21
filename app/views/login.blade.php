@@ -22,7 +22,7 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link href="assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css"/>
 <link href="assets/global/plugins/select2/select2-metronic.css" rel="stylesheet" type="text/css"/>
-<link href="assets/admin/pages/css/login.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/pages/css/login-soft.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME STYLES -->
 <link href="assets/global/css/components.css" rel="stylesheet" type="text/css"/>
@@ -179,12 +179,13 @@
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/global/plugins/select2/select2.min.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
-<script src="assets/admin/pages/scripts/login.js" type="text/javascript"></script>
+<script src="assets/admin/pages/scripts/login-soft.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 		jQuery(document).ready(function() {     
