@@ -47,7 +47,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="{{ URL::to('/') }}">
-	<img src="assets/frontend/layout/img/logos/logo-red.png" alt=""/>
+		<h1>MED<small>ZOC.COM</small></h1>
 	</a>
 </div>
 <!-- END LOGO -->

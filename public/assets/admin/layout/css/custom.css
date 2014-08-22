@@ -82,3 +82,17 @@ button {
 	  margin-top: 0;
   	}
 }
+
+.logo a h1{
+	color: red !important;
+}
+
+.page-logo h1{
+	color: red !important;
+	margin-top: 10px !important;
+	margin-bottom: 0px !important;
+}
+
+.page-logo h1 small{
+	
+}
