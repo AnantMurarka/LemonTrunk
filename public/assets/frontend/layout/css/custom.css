@@ -42,3 +42,6 @@ button {
 	padding: 15px;
 }
 
+.site-logo h1 small {
+	color: #868686 !important;
+}
