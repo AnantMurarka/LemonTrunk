@@ -116,7 +116,6 @@
 														<?php
 														}
 													?>
-													
 												</td>
 												<td>
 													 {{ $specialism->name }}
@@ -125,8 +124,7 @@
 													{{ $specialism->description }}
 												</td>
 												<td>
-													 
-													 <?php
+													<?php
 														if ($specialism->doctor != '')
 														{ ?>
 															<a href="#" class="btn btn-sm red">

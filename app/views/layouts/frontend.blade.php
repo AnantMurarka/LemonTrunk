@@ -71,8 +71,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="header">
       <div class="container">
         <a class="site-logo" href="{{ URL::to('/')}}">
-          <!-- {{ HTML::image('assets/frontend/layout/img/logos/logo-red.png') }} -->
-            <h1>MED<small>ZOC.COM</small></h1>
+          {{ HTML::image('assets/frontend/layout/img/logos/logo-red.png') }}
+            <!-- <h1>MED<small>ZOC.COM</small></h1> -->
         </a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>

@@ -64,7 +64,7 @@
 									<a href="{{ URL::to('doctor/register/hospital') }}">Register a hospital</a>
 								</li>
 								<li>
-									<a href="#">Edit/Add Guest</a>
+									<a href="{{ URL::to('/') }}">Back to dashboard</a>
 								</li>
 							</ul>
 						</li>
@@ -84,7 +84,55 @@
 		<div class="row">
 			<div class="col-md-9">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-7">
+						<!-- BEGIN HOSPITALS PORTLET-->
+						<div class="portlet box radius">
+							<div class="portlet-title radius">
+								<div class="caption" style="color:#333 !important;">
+									<i class="fa fa-h-square"></i>List of Registered Hospitals
+								</div>
+							</div>
+							<div class="portlet-body radius">
+							 {{ Datatable::table()
+    							->addColumn('ID','Name','Type', 'Address')       // these are the column headings to be shown
+    							->setUrl(route('dt_hospital_all'))   // this is the route where data will be retrieved
+    							->render() }}
+							</div>
+						</div>
+						<!-- END HOSPITALS PORTLET-->
+					</div>
+					<div class="col-md-5">
+						<div class="portlet box radius">
+							<div class="portlet-title radius">
+								<div class="caption" style="color:#333 !important;">
+									<i class="fa fa-hospital-o"></i>Link a hospital to me!
+								</div>
+							</div>
+							<div class="portlet-body radius">
+								<!-- BEGIN FORM-->
+								{{ Form::open(array('action' => 'RegistrationController@registerHospital','class'=>'horizontal-form')) }}
+									<div class="form-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label id="test" class="control-label">Input Hospital ID <small>(use leftside table)</small></label>
+													<input type="text" id="name" name='name' class="form-control" placeholder="Medical Center" onkeyup="call()">
+													<span class="help-block">
+													Kindly input full hospital name </span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-actions right">
+										<button type="button" class="btn default">Cancel</button>
+										<button type="submit" class="btn red"><i class="fa fa-check"></i>Link it to me!</button>
+									</div>
+								{{ Form::close()}}
+								<!-- END FORM-->
+							</div>
+						</div>
+
+
 						<div class="portlet box radius">
 							<div class="portlet-title radius">
 								<div class="caption" style="color:#333 !important;">
@@ -113,8 +161,6 @@
 													</td>
 													<td>
 														<p>{{ $myHospital->type }}</p>
-														<!-- <button type="button" class="btn red"><i class="fa fa-minus-circle"></i>
-														</button> -->
 													</td>
 												</tr>
 											<?php
@@ -126,26 +172,6 @@
 								</div>
 							</div>
 						</div>
-						<!-- END EXAMPLE TABLE PORTLET-->
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<!-- BEGIN HOSPITALS PORTLET-->
-						<div class="portlet box radius">
-						<div class="portlet-title radius">
-							<div class="caption" style="color:#333 !important;">
-								<i class="fa fa-h-square"></i>Affiliated Hospitals
-							</div>
-						</div>
-						<div class="portlet-body radius">
-						 {{ Datatable::table()
-    						->addColumn('Name','Type', 'Address')       // these are the column headings to be shown
-    						->setUrl(route('dt_hospital_all'))   // this is the route where data will be retrieved
-    						->render() }}
-						</div>
-						</div>
-						<!-- END HOSPITALS PORTLET-->
 					</div>
 				</div>
 			</div>

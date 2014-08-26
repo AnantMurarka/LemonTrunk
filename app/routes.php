@@ -247,7 +247,7 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 	/* Begin MyHospital Registration */
 	Route::get('register/myhospital',
 	array(
-		'uses'=>'DoctorController@registrationHospital'
+		'uses'=>'DoctorController@myHospital'
 		)
 	);
 	/* End MyHospital Registration */
@@ -256,7 +256,14 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 	Route::get('hospitallist',
 	array(
 		'as' => 'dt_hospital_all',
-		'uses'=>'DoctorController@hospitalList'
+		'uses'=>'HospitalController@hospitalList'
+		));
+
+	/* ajax calls */
+	Route::post('hospitalnames',
+	array(
+		'as' => 'fillhospitalname',
+		'uses'=>'HospitalController@autoFill'
 		));
 
 });

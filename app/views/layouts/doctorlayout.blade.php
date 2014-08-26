@@ -45,7 +45,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="{{ URL::to('doctor/dashboard') }}">
-			<h1>MED<small>ZOC.COM</small></h1>
+			<!-- <h1>MED<small>ZOC.COM</small></h1> -->
+			<img src="../assets/admin/layout/img/logo-big.png" alt="logo" class="logo-default"/>
 			</a>
 		</div>
 		<!-- END LOGO -->

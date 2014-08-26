@@ -6,8 +6,6 @@ class HomeController extends BaseController {
 	public function index()
 	{
 		$view = View::make('index', array());
-		// var_dump(Auth::doctor()->check());
-		// die();
 		if (Auth::doctor()->check() == true)
 		{
 			$view = Redirect::to('doctor/dashboard');
@@ -18,7 +16,6 @@ class HomeController extends BaseController {
             return $view;
 		}
 
-		
 		$view->appTitle 	=	$this->appTitle;
 		return $view;
 	}

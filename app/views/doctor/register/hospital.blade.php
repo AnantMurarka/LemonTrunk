@@ -50,7 +50,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="#">Edit/Add My hospital</a>
+								<a href="{{ URL::to('doctor/register/myhospital') }}">Link a hospital</a>
 							</li>
 							<li>
 								<a href="{{ URL::to('doctor/hospital') }}">Back</a>
@@ -73,7 +73,7 @@
 						<div class="portlet box">
 							<div class="portlet-title" style="color:#333 !important;">
 								<div class="caption">
-									<i class="fa fa-gift"></i>Register Hospital
+									<i class="fa fa-file-o"></i>Register Hospital
 								</div>
 							</div>
 							<div class="portlet-body form radius">
@@ -342,14 +342,7 @@
        	        document.getElementById('cities').options.length = 0;
        	        for (var i=0; i<data.length; i++) 
        	        {
-       	        	// if (city == data[i].id )
-       	        	// {
-       	        	// 	sel.append('<option value="' + data[i].id + '" selected>' + data[i].City + '</option>');
-       	        	// }
-       	        	// else
-       	        	// {
-       	        		sel.append('<option value="' + data[i].id + '">' + data[i].City + '</option>');
-       	        	// }
+       	        	sel.append('<option value="' + data[i].id + '">' + data[i].City + '</option>');
     			}
        	    },
        	    error: function (xhr, ajaxOptions, thrownError) 

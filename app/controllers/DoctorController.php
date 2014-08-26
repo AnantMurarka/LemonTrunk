@@ -27,8 +27,6 @@ class DoctorController extends BaseController {
 		$view->countries 		= 	Country::all();
 		$view->provinces 		= 	Province::where('countryCode', '=', $doctor->address5)->get();
 		$view->cities 			= 	City::where('ProvinceCode', '=', $doctor->address5)->get();
-		// $view->specialisms 		= 	SpecialismList::all();
-		// $view->hospitalLists 	= 	HospitalList::hospitalsList();
 		return $view;
 	}
 
@@ -38,17 +36,17 @@ class DoctorController extends BaseController {
 		$id 					= Auth::doctor()->get()->id;
 		$view 					=	View::make('doctor.hospital', array());
 		$view->appTitle 		=	$this->appTitle;
-		// $view->hospitals 		= 	HospitalList::hospitalsList();
 		$view->myHospitals 		= 	Doctor::doctorHospital($id);
 		return $view;
 	}
 
-	public function hospitalList()
+	public function myHospital()
 	{
-		return Datatable::collection(HospitalList::hospitalsList())
-		->showColumns('name', 'type', 'City', 'contact')
-        ->searchColumns('name', 'Address1', 'Address2', 'City', 'province')
-        ->make();
+		/* Initialization */
+		$id 					= Auth::doctor()->get()->id;
+		$view 					=	View::make('doctor.register.myhospital', array());
+		$view->appTitle 		=	$this->appTitle;
+		return $view;
 	}
 
 	public function specialization()
@@ -101,7 +99,7 @@ class DoctorController extends BaseController {
 	{
 		$input 		= Input::all();
 		$result 	= Doctor::updatePersocalInfo($input);
-
+		
 		if($result['result'] == 'Success') return Redirect::to('doctor/profile')->with('result', 'Success')->with('message', 'Your Information has been updated!');
 		else return Redirect::to('doctor/profile')->with('result', 'Fail')->with('message', 'Something went wrong. Your information was not updated!');
 	}
@@ -145,9 +143,6 @@ class DoctorController extends BaseController {
 		$view->countries 		= 	Country::all();
 		$view->provinces 		= 	Province::all();
 		$view->cities 			= 	City::all();
-		// $view->hospitals 		= 	HospitalList::hospitalsList();
-		// $view->myHospitals 		= 	Doctor::doctorHospital($id);
-
 		return $view;
 	}
 }

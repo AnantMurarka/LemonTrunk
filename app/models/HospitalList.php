@@ -7,8 +7,7 @@ class HospitalList extends Eloquent {
 	{
 		$data = HospitalList::join('Cities', 'Cities.id', '=', 'hospital_list.Address3')
 		->join('Province', 'Province.id', '=', 'hospital_list.Address4')
-		// ->paginate(10);
-		->get();
+		->get(array('hospital_list.id', 'hospital_list.name', 'hospital_list.type', 'Cities.City', 'Province.province' ));
 
 		return $data;
 	}
