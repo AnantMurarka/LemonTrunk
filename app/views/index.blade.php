@@ -215,7 +215,7 @@
 						<ul class="list-unstyled margin-bottom-20">
 							<li>Free App <i class="fa fa-check"></i> </li>
 							<li>Free Online Booking <i class="fa fa-check"></i> </li>
-							<li>Free Sign up <i class="fa fa-check"></i> </li>
+							<li>Free Patient Sign up <i class="fa fa-check"></i> </li>
 							<li>Free Searching <i class="fa fa-check"></i> </li>
 							<li>Doctor Admin <i class="fa fa-check"></i> </li>
 							<li>Patients Admin <i class="fa fa-check"></i> </li>
@@ -225,7 +225,7 @@
 						<ul class="list-unstyled">
 							<li><i class="fa fa-check"></i> Free App</li>
 							<li><i class="fa fa-check"></i> Free Online Booking </li>
-							<li><i class="fa fa-check"></i> Free Sign up</li>
+							<li><i class="fa fa-check"></i> Free Patient Sign up</li>
 							<li><i class="fa fa-check"></i> Free Searching </li>
 							<li><i class="fa fa-check"></i> Doctor Admin</li>
 							<li><i class="fa fa-check"></i> Patients Admin </li>
