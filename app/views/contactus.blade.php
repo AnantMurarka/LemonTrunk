@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-9 col-sm-9 ">
                         <h2>Contact Form</h2>
-                        <p>Lorem ipsum dolor sit amet, Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat consectetuer adipiscing elit, sed diam nonummy nibh euismod tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <p>If you have any questions regarding how medzoc operate and how teknolohiya.ph is related to it.  Kindly email us using the form below. And for support and technical problem regarding your account. Kindly use the form on the support page. This is for us to respond more quickly to specific concerns.</p>
                         <!-- BEGIN FORM-->
                         <form action="#" role="form">
                             <div class="form-group">
@@ -70,23 +70,20 @@
                         </address>
                         <address>
                             <strong>Email</strong><br>
-                            <a href="mailto:info@email.com">info@teknolohiya.com</a><br>
-                            <a href="mailto:support@example.com">hello@teknolohiya.ph</a>
+                            <a href="mailto:info@teknolohiya.ph">info@teknolohiya.ph</a><br>
+                            <a href="mailto:hello@teknolohiya.ph">hello@teknolohiya.ph</a>
                         </address>
                         <ul class="social-icons margin-bottom-40">
                             <li><a href="#" data-original-title="facebook" class="facebook"></a></li>
-                            <li><a href="#" data-original-title="github" class="github"></a></li>
-                            <li><a href="#" data-original-title="Goole Plus" class="googleplus"></a></li>
                             <li><a href="#" data-original-title="linkedin" class="linkedin"></a></li>
-                            <li><a href="#" data-original-title="rss" class="rss"></a></li>
                         </ul>
-                        <h2 class="padding-top-30">About Us</h2>
-                        <p>Sediam nonummy nibh euismod tation ullamcorper suscipit</p>
-                        <ul class="list-unstyled">
+                        <h2 class="padding-top-30">NOTE:</h2>
+                        <p>The above office address is temporary. As we continue to grow we will be updating our office and other services to serve you more.</p>
+                        <!-- <ul class="list-unstyled">
                             <li><i class="fa fa-check"></i> Officia deserunt molliti</li>
                             <li><i class="fa fa-check"></i> Consectetur adipiscing </li>
                             <li><i class="fa fa-check"></i> Deserunt fpicia</li>
-                        </ul>        
+                        </ul>     -->    
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ class BaseController extends Controller {
 	|
 	*/
 
-	public $appTitle 	= 'DocSearch Project';
+	public $appTitle 	= 'Medzoc.com';
 	public $appVerion 	= 'Dev 1.0.0';
 
 	protected function setupLayout()

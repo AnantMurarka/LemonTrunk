@@ -51,7 +51,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="col-md-6 col-sm-6 additional-shop-info">
                     <ul class="list-unstyled list-inline">
                         <li><i class="fa fa-phone"></i><span>hotline number for emergency calls</span></li>
-                        <li><i class="fa fa-envelope-o"></i><span>hello@docsearch.com</span></li>
+                        <li><i class="fa fa-envelope-o"></i><span>hello@medzoc.com</span></li>
                     </ul>
                 </div>
                 <!-- END TOP BAR LEFT PART -->
@@ -142,7 +142,7 @@ License: You must have a valid license purchased only from themeforest(the above
               2399 Belarmino St. Bangkal, Makati City<br>
               Metro Manila, RP<br>
               Phone: comming soon<br>
-              Email: <a href="mailto:hello@docsearch.com">hello@docsearch.com</a><br>
+              Email: <a href="mailto:hello@medzoc.com">hello@medzoc.com</a><br>
             </address>
 
             <!-- <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
