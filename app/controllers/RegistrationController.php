@@ -231,7 +231,6 @@ class RegistrationController extends BaseController {
 	public function registerHospital()
 	{
 		$input = Input::all();
-		
 		try
 		{
 			$hospitalList = new HospitalList();
@@ -253,12 +252,43 @@ class RegistrationController extends BaseController {
 		{
 			return Redirect::to('doctor/hospital')->with('result', 'Failed')->with('message', 'Something went wrong! Hospital was not added. Please retry again.');
 		}
-		
-
-		
 	}
 
 	/* END HOSPITAL REGISTRATION SECTION */
+
+	/* =========================================================================================== */
+
+	/* BEGIN HOSPITAL LINKING */
+
+	public function linkHospital()
+	{
+		$input = Input::all();
+		// Check is hospital is already linked then start linking if not redirect to hospital page show error message
+		$hospital = DoctorHospital::where('hospital_id', '=', $input['hospital_id'])
+		->where('doctor_id', '=', Auth::doctor()->get()->id)
+		->get();
+
+		// var_dump(empty($hospital[0]));
+		// var_dump($hospital);
+		// die();
+
+		if (empty($hospital[0]))
+		{
+			$linkingHospital = new DoctorHospital();
+			$linkingHospital->doctor_id 		= Auth::doctor()->get()->id;
+			$linkingHospital->hospital_id		= $input['hospital_id'];
+			$linkingHospital->save();
+
+			return Redirect::to('doctor/hospital')->with('result', 'Successfull')->with('message', 'New hospital has successfully been added.');
+		}
+		else
+		{
+			return Redirect::to('doctor/hospital')->with('result', 'Failed')->with('message', 'Hospital is already linked to your profile.');
+		}
+
+	}
+
+	/* END HOSPITAL LINKING */
 
 	/* =========================================================================================== */
 	

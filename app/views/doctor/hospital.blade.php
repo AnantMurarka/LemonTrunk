@@ -60,6 +60,8 @@
 							<span>Actions</span><i class="fa fa-angle-down"></i>
 							</button>
 							<ul class="dropdown-menu pull-right" role="menu">
+								<?php
+								?>
 								<li>
 									<a href="{{ URL::to('doctor/register/hospital') }}">Register a hospital</a>
 								</li>
@@ -74,7 +76,7 @@
 							<i class="fa fa-angle-right"></i>
 						</li>
 						<li>
-							<a href="#" class="red">{{ Session::get('message') }}</a>
+							<a href="#" class="notification"><strong>{{ Session::get('result') }}</strong> {{ Session::get('message') }}</a>
 						</li>
 					</ul>
 					<!-- END PAGE TITLE & BREADCRUMB-->
@@ -116,7 +118,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label id="test" class="control-label">Input Hospital ID <small>(use leftside table)</small></label>
-													<input type="text" id="name" name='name' class="form-control" placeholder="Medical Center" onkeyup="call()">
+													<input type="text" id="hospital_id" name='hospital_id' class="form-control" placeholder="Medical Center" onkeyup="call()">
 													<span class="help-block">
 													Kindly input full hospital name </span>
 												</div>
@@ -124,7 +126,7 @@
 										</div>
 									</div>
 									<div class="form-actions right">
-										<button type="button" class="btn default">Cancel</button>
+										<!-- <button type="button" class="btn default">Cancel</button> -->
 										<button type="submit" class="btn red"><i class="fa fa-check"></i>Link it to me!</button>
 									</div>
 								{{ Form::close()}}

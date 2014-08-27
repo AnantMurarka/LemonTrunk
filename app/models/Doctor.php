@@ -28,6 +28,10 @@ class Doctor extends Eloquent {
 		return $this->hasMany('DoctorLanguage', 'doctor_id');
 	}
 
+	public function patient() {
+		return $this->hasMany('DoctorPatient', 'doctor_id');
+	}
+
 	/* Functions =================================================== */
 	/* Display Functions */
 	public static function profile($id)

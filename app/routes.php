@@ -244,13 +244,13 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 	);
 	/* End Hospital Registration */
 
-	/* Begin MyHospital Registration */
-	Route::get('register/myhospital',
+	/* Begin linking hospital */
+	Route::post('link/hospital',
 	array(
-		'uses'=>'DoctorController@myHospital'
+		'uses'=>'RegistrationController@linkHospital'
 		)
 	);
-	/* End MyHospital Registration */
+	/* End linking hospital */
 
 	/* datatables */
 	Route::get('hospitallist',

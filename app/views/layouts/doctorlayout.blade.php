@@ -489,6 +489,20 @@ License: You must have a valid license purchased only from themeforest(the above
 				</li>
 
 				<li class="active text-center">
+					<a href="{{ URL::to('doctor/tasker') }}">
+					<i class="fa fa-check-square-o"></i></br>
+					<span class="title">Tasker</span>
+					</a>
+				</li>
+
+				<li class="text-center">
+					<a href="{{ URL::to('doctor/patients') }}">
+					<i class="fa fa-wheelchair"></i></br>
+					<span class="title">Patients</span>
+					</a>
+				</li>
+
+				<li class="active text-center">
 					<a href="{{ URL::to('doctor/hospital') }}">
 					<i class="fa fa-ambulance"></i></br>
 					<span class="title">My Hospital</span>
@@ -509,19 +523,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 				</li>
 
-				<li class="text-center">
-					<a href="{{ URL::to('doctor/patients') }}">
-					<i class="fa fa-wheelchair"></i></br>
-					<span class="title">Patients</span>
-					</a>
-				</li>
-
-				<li class="active text-center">
-					<a href="{{ URL::to('doctor/tasker') }}">
-					<i class="fa fa-check-square-o"></i></br>
-					<span class="title">Tasker</span>
-					</a>
-				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

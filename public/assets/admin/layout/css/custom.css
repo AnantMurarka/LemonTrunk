@@ -83,6 +83,10 @@ button {
   	}
 }
 
+.notification {
+	color: red !important;
+}
+
 .logo a h1{
 	color: red !important;
 }

@@ -3,13 +3,13 @@
 return array(
 	
 	'facebook' => array(
-		'id' => '443138082488299',
-		'secret' => '588e63fab70bb56a27a3b82bda6b2c1e',
+		'id' => '725987010802324',
+		'secret' => 'd1408c105b603c8d4c49d2ccf865d5bc',
 	),
 	
 	'google' => array(
-		'id' => '417054929191-qiu5ahmtrnr8nc7auvmckmq3pg9psquq.apps.googleusercontent.com',
-		'secret' => '3wQXx-crh_-HhFCw4AgICR4M',
+		'id' => '189897875908-eoip2qd16o7riqliace1i0pj88sml6d7.apps.googleusercontent.com',
+		'secret' => 'GXumG_BgpnnzXyXZZizBKBIV',
 	),
 	
 
