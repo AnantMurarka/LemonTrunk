@@ -12,7 +12,7 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link href="{{ URL::to('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css"/>
 <link href="{{ URL::to('assets/admin/pages/css/profile.css') }}" rel="stylesheet" type="text/css"/>
-
+<link rel="stylesheet" href="{{ URL::to('assets/global/plugins/data-tables/DT_bootstrap.css') }}"/>
 <!-- END PAGE LEVEL STYLES -->
 <!-- BEGIN THEME STYLES -->
 {{ HTML::style('assets/global/plugins/select2/select2.css') }}
@@ -68,10 +68,15 @@
 				</li>
 				<li class="radius-top">
 					<a href="#tab_1_3" data-toggle="tab">
+					Profession </a>
+				</li>
+				<li class="radius-top">
+					<a href="#tab_1_4" data-toggle="tab">
 					Help </a>
 				</li>
 			</ul>
 			<div class="tab-content radius">
+				<!--tab_1_1-->
 				<div class="tab-pane active" id="tab_1_1">
 					<div class="row">
 						<div class="col-md-3">
@@ -121,16 +126,27 @@
 										{{ $doctor->personal_statement }}
 									</p>
 									<h4><strong>Ratings</strong> <small>{{$doctor->ratings}} </small></h4>
+									<?php
+
+										$rates = explode(".", $doctor->ratings);
+									?>
 									<p>
 										<ul class="stars list-inline">
 											<?php
-											for ($i = 0; $i < $doctor->ratings; $i++)
+											for ($i = 0; $i < $rates[0]; $i++)
 											{ ?>
 												<li>
 													<i class="fa fa-star" style="color:#d84a38"></i>
 												</li>
-											<?php
+												<?php
 											}
+											if(isset($rates[1]))
+												{ ?>
+													<li>
+														<i class="fa fa-star-half-o" style="color:#d84a38"></i>
+													</li>
+												<?php
+												}
 											?>
 										</ul>
 									</p>
@@ -245,6 +261,7 @@
 						</div>
 					</div>
 				</div>
+				<!--end tab-pane-->
 				<!--tab_1_2-->
 				<div class="tab-pane" id="tab_1_2">
 					<div class="row profile-account">
@@ -503,7 +520,105 @@
 					</div>
 				</div>
 				<!--end tab-pane-->
+				<!--tab_1_3-->
 				<div class="tab-pane" id="tab_1_3">
+					<div class="row profile-account">
+						<div class="col-md-3">
+							<ul class="ver-inline-menu tabbable margin-bottom-10">
+								<li class="active">
+									<a data-toggle="tab" href="#profession_tab_1-1">
+									<i class="fa fa-stethoscope"></i> Specialization </a>
+									<span class="after">
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-10">
+							<div class="tab-content col-md-12">
+								<div id="profession_tab_1" class="tab-pane active">
+									<!-- <div class="col-md-12"> -->
+										<!-- BEGIN HOSPITALS PORTLET-->
+										<div class="portlet box radius">
+											<div class="portlet-title radius">
+											<div class="caption" style="color:#333 !important;">
+												<i class="fa fa-h-square"></i>Medical Specializations<small> add and remove specialization here</small>
+											</div>
+											</div>
+											<div class="portlet-body radius">
+												<table class="table table-striped table-hover radius" id="sample_editable_1">
+											<thead>
+													<tr>
+														<th>Status</th>
+														<th>Specialization</th>
+														<th>Actions</th>
+													</tr>
+											</thead>
+											<tbody>
+												<?php
+													foreach ($specialisms as $specialism) 
+													{?>
+														<tr>
+															<td>
+																<!-- <span class="row-details row-details-close"></span> -->
+																<?php
+																	if ($specialism->doctor != '')
+																	{ ?>
+																		<!-- <p><i class="fa green fa-dot-circle-o"></i>
+																		</p> -->
+																		<span class="item">
+																			<span aria-hidden="true" class="icon-check" style="color:green !important;"></span>
+																		</span>
+																	<?php
+																	}
+																	else
+																	{ ?>
+																		<span class="item green">
+																			<span aria-hidden="true" class="icon-close" style="color:red !important;"></span>
+																		</span>
+																	<?php
+																	}
+																?>
+															</td>
+															<td>
+																 {{ $specialism->name }}
+															</td>
+															<td>
+																<?php
+																	if ($specialism->doctor != '')
+																	{ ?>
+																		<a href="#" class="btn btn-sm red">
+																			Remove <i class="fa fa-plus"></i>
+																		</a>
+																	<?php
+																	}
+																	else
+																	{ ?>
+																		<a href="#" class="btn btn-sm green">
+																			Add <i class="fa fa-plus"></i>
+																		</a>
+																	<?php
+																	}
+																?>
+															</td>
+														</tr>
+													<?php
+													}
+													?>
+											</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- END HOSPITALS PORTLET-->
+									<!-- </div> -->
+								</div>
+							</div>
+						</div>
+						<!--end col-md-9-->
+					</div>
+				</div>
+				<!--end tab-pane-->
+				<!--tab_1_4-->
+				<div class="tab-pane" id="tab_1_4">
 					<div class="row">
 						<div class="col-md-3">
 							<ul class="ver-inline-menu tabbable margin-bottom-10">
@@ -869,6 +984,8 @@
 <script src="{{ URL::to('assets/global/plugins/multiselect/jquery.multi-select.js') }}" type="text/javascript"></script>
 
 <script src="{{ URL::to('assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ URL::to('assets/global/plugins/data-tables/jquery.dataTables.min.js') }}"></script>
+	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/data-tables/DT_bootstrap.js') }}"></script>
 <!-- Maps -->
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script src="{{ URL::to('assets/global/plugins/gmaps/gmaps.js') }}" type="text/javascript"></script>
@@ -877,6 +994,7 @@
 <script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 <script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
 <script src="{{ URL::to('assets/admin/pages/scripts/form-samples.js') }}"></script>
+<script src="{{ URL::to('assets/admin/pages/scripts/table-editable.js') }}"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 
@@ -923,7 +1041,7 @@
 		mapMarker();	// init for google map
 		Layout.init();		// init current layout
 		FormSamples.init(); // init forms
-		
+		TableEditable.init();
 	});
 
 	var country 	= '{{ $doctor->address5 }}';

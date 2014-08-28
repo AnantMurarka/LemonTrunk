@@ -117,8 +117,6 @@ class Doctor extends Eloquent {
 		   	$result = array('result' => 'Success' , 'message' => 'Your avatar has been updated!' );
 			return $result;
 		}
-
-
 		return $result;
 	}
 

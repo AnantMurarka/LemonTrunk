@@ -14,8 +14,6 @@
 	<link href="{{ URL::to('assets/global/plugins/fancybox/source/jquery.fancybox.css') }}" rel="stylesheet"/>
 	<!-- BEGIN:File Upload Plugin CSS files-->
 	<link href="{{ URL::to('assets/global/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css') }}" rel="stylesheet"/>
-	<link href="{{ URL::to('assets/global/plugins/jquery-file-upload/css/jquery.fileupload.css') }}" rel="stylesheet"/>
-	<link href="{{ URL::to('assets/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css') }}" rel="stylesheet"/>
 	<!-- END:File Upload Plugin CSS files-->
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
@@ -95,32 +93,7 @@
 	<script src="{{ URL::to('assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}" type="text/javascript"></script>
 	<!-- BEGIN:File Upload Plugin JS files-->
-	<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js') }}"></script>
-	<!-- The Templates plugin is included to render the upload/download listings -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/vendor/tmpl.min.js') }}"></script>
-	<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/vendor/load-image.min.js') }}"></script>
-	<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js') }}"></script>
-	<!-- blueimp Gallery script -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js') }}"></script>
-	<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.iframe-transport.js') }}"></script>
-	<!-- The basic File Upload plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload.js') }}"></script>
-	<!-- The File Upload processing plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-process.js') }}"></script>
-	<!-- The File Upload image preview & resize plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-image.js') }}"></script>
-	<!-- The File Upload audio preview plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-audio.js') }}"></script>
-	<!-- The File Upload video preview plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-video.js') }}"></script>
-	<!-- The File Upload validation plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-validate.js') }}"></script>
-	<!-- The File Upload user interface plugin -->
-	<script src="{{ URL::to('assets/global/plugins/jquery-file-upload/js/jquery.fileupload-ui.js') }}"></script>
+	
 	<!-- The main application script -->
 	<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
 	<!--[if (gte IE 8)&(lt IE 10)]>
@@ -130,7 +103,6 @@
 	<!-- END: Page level plugins -->
 	<script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/inbox.js') }}" type="text/javascript"></script>
 	<script>
 	jQuery(document).ready(function() {       
 	   // initiate layout and plugins

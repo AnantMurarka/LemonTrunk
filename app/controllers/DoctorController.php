@@ -23,6 +23,9 @@ class DoctorController extends BaseController {
 		$doctor 				=	json_decode(Doctor::profile($id));
 		$view->doctor 			=	$doctor;
 
+		/* specialization */
+		$view->specialisms 		= 	DoctorSpecialization::specializationWithDoctor();
+
 		/* for page data */
 		$view->countries 		= 	Country::all();
 		$view->provinces 		= 	Province::where('countryCode', '=', $doctor->address5)->get();
