@@ -510,13 +510,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				</li>
 
 				<li class="text-center">
-					<a href="{{ URL::to('doctor/specialization') }}">
-					<i class="fa fa-stethoscope"></i></br>
-					<span class="title">Specialism</span>
-					</a>
-				</li>
-
-				<li class="active text-center">
 					<a href="{{ URL::to('doctor/insurance') }}">
 					<i class="fa fa-certificate"></i></br>
 					<span class="title">Insurance</span>
