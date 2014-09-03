@@ -526,19 +526,22 @@
 						<div class="col-md-3">
 							<ul class="ver-inline-menu tabbable margin-bottom-10">
 								<li class="active">
-									<a data-toggle="tab" href="#profession_tab_1-1">
+									<a data-toggle="tab" href="#profession_tab_1">
 									<i class="fa fa-stethoscope"></i> Specialization </a>
 									<span class="after">
 									</span>
 								</li>
+								<li>
+									<a data-toggle="tab" href="#profession_tab_2">
+									<i class="fa fa-certificate"></i> Insurance </a>
+								</li>
 							</ul>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-9">
 							<div class="tab-content col-md-12">
 								<div id="profession_tab_1" class="tab-pane active">
-									<!-- <div class="col-md-12"> -->
-										<!-- BEGIN HOSPITALS PORTLET-->
-										<div class="portlet box radius">
+									<!-- BEGIN SPECIALIZATION PORTLET-->
+									<div class="portlet box radius">
 											<div class="portlet-title radius">
 											<div class="caption" style="color:#333 !important;">
 												<i class="fa fa-h-square"></i>Medical Specializations<small> add and remove specialization here</small>
@@ -607,9 +610,79 @@
 											</tbody>
 												</table>
 											</div>
+									</div>
+									<!-- END SPECIALIZATION PORTLET-->
+								</div>
+								<div id="profession_tab_2" class="tab-pane">
+									<!-- BEGIN INSURANCE FORM PORTLET-->
+									<div class="portlet box">
+										<div class="portlet-title">
+											<div class="caption">
+												<i class="fa fa-gift"></i> Add Insurance
+											</div>
+											<div class="tools">
+												<a href="" class="collapse">
+												</a>
+												<a href="#portlet-config" data-toggle="modal" class="config">
+												</a>
+												<a href="" class="reload">
+												</a>
+											</div>
 										</div>
-										<!-- END HOSPITALS PORTLET-->
-									<!-- </div> -->
+										<div class="portlet-body form radius">
+											<form role="form">
+												<div class="form-body">
+													<div class="form-group">
+														<label>Input Insurance Company</label>
+														<input class="form-control spinner" type="text" placeholder="Insurance"/>
+													</div>
+												</div>
+													
+												<div class="form-actions">
+													<button type="submit" class="btn red">Submit</button>
+													<button type="button" class="btn default">Cancel</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<!-- END INSURANCE FORM PORTLET-->
+									<!-- BEGIN INSURANCE PORTLET-->
+									<div class="portlet box radius">
+										<div class="portlet-title radius">
+											<div class="caption" style="color:#333 !important;">
+												<i class="fa fa-h-square"></i>My current insurance <small> view and remove insurance here</small>
+											</div>
+										</div>
+										<div class="portlet-body radius">
+											<table class="table table-striped table-hover radius" id="sample_editable_1">
+												<thead>
+														<tr>
+															<th>Insurance</th>
+															<th>Actions</th>
+														</tr>
+												</thead>
+												<tbody>
+													<?php
+														foreach ($insurances as $insurance) 
+														{?>
+															<tr>
+																<td>
+																	 {{ $insurance->insurance }}
+																</td>
+																<td>
+																	<a href="#" class="btn btn-sm red">
+																		Remove <i class="fa fa-plus"></i>
+																	</a>
+																</td>
+															</tr>
+														<?php
+														}
+														?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<!-- END HOSPITALS PORTLET-->
 								</div>
 							</div>
 						</div>

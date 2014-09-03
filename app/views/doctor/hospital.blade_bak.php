@@ -91,69 +91,50 @@
 						<div class="portlet box radius">
 							<div class="portlet-title radius">
 								<div class="caption" style="color:#333 !important;">
-									<i class="fa fa-h-square"></i>Registered Hospitals
+									<i class="fa fa-h-square"></i>List of Registered Hospitals
 								</div>
 							</div>
 							<div class="portlet-body radius">
-							 	<div class="form-group">
-									<input type="text" id="hospital_id" name='hospital_id' class="form-control" placeholder="Search" onkeyup="call()">
-								</div>
-								<div class="form-actions right">
-									<button type="submit" class="btn dark"><i class="fa fa-search"></i> Search</button>
-								</div>
+							 {{ Datatable::table()
+    							->addColumn('ID','Name','Type', 'Address')       // these are the column headings to be shown
+    							->setUrl(route('dt_hospital_all'))   // this is the route where data will be retrieved
+    							->render() }}
 							</div>
 						</div>
-
-						<!-- BEGIN HOSPITAL LIST -->
-
-						<div class="portlet box radius">
-							<div class="portlet-body radius">
-							 	<div class="row">
-							 		<div class="col-md-3">
-							 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
-							 		</div>
-							 		<div class="col-md-8">
-							 			<div class="bar-name">-    </div>
-							 			<div class="bar-address">-    </div>
-							 			<div class="form-actions right">
-											<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
-										</div>
-							 		</div>
-							 	</div>
-							 	<div class="row">
-							 		<div class="col-md-12">
-							 			<div class="bar-description"><p>-</p><p>-</p><p>-</p><p>-</p></div>
-							 		</div>
-							 	</div>
-							</div>
-						</div>
-
-						<div class="portlet box radius">
-							<div class="portlet-body radius">
-							 	<div class="row">
-							 		<div class="col-md-3">
-							 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
-							 		</div>
-							 		<div class="col-md-8">
-							 			<div class="bar-name">.    </div>
-							 			<div class="bar-address">.    </div>
-							 			<div class="form-actions right">
-											<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
-										</div>
-							 		</div>
-							 	</div>
-							 	<div class="row">
-							 		<div class="col-md-12">
-							 			<div class="bar-description"><p>.</p><p>.</p><p>.</p><p>.</p></div>
-							 		</div>
-							 	</div>
-							</div>
-						</div>
-						<!-- END HOSPITAL LIST -->
-
 						<!-- END HOSPITALS PORTLET-->
 					</div>
 					<div class="col-md-5">
+						<div class="portlet box radius">
+							<div class="portlet-title radius">
+								<div class="caption" style="color:#333 !important;">
+									<i class="fa fa-hospital-o"></i>Link a hospital to me!
+								</div>
+							</div>
+							<div class="portlet-body radius">
+								<!-- BEGIN FORM-->
+								{{ Form::open(array('action' => 'RegistrationController@registerHospital','class'=>'horizontal-form')) }}
+									<div class="form-body">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<label id="test" class="control-label">Input Hospital ID <small>(use leftside table)</small></label>
+													<input type="text" id="hospital_id" name='hospital_id' class="form-control" placeholder="Medical Center" onkeyup="call()">
+													<span class="help-block">
+													Kindly input full hospital name </span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-actions right">
+										<!-- <button type="button" class="btn default">Cancel</button> -->
+										<button type="submit" class="btn red"><i class="fa fa-check"></i>Link it to me!</button>
+									</div>
+								{{ Form::close()}}
+								<!-- END FORM-->
+							</div>
+						</div>
+
+
 						<div class="portlet box radius">
 							<div class="portlet-title radius">
 								<div class="caption" style="color:#333 !important;">

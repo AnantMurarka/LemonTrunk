@@ -41,19 +41,6 @@
 					
 					</h3>
 					<ul class="page-breadcrumb breadcrumb radius">
-						<!-- <li class="btn-group">
-							<button type="button" class="btn red dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-							<span>Actions</span><i class="fa fa-angle-down"></i>
-							</button>
-							<ul class="dropdown-menu pull-right" role="menu">
-								<li>
-									<a href="#">Register a hospital</a>
-								</li>
-								<li>
-									<a href="#">Edit/Add My hospital</a>
-								</li>
-							</ul>
-						</li> -->
 						<li>
 							<i class="fa fa-home"></i>
 							<a href="#">Dashboard <small>Welcome {{ Auth::doctor()->get()->firstname }} {{ Auth::doctor()->get()->middlename }} {{ Auth::doctor()->get()->lastname }}</small></a>

@@ -509,13 +509,6 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 				</li>
 
-				<li class="text-center">
-					<a href="{{ URL::to('doctor/insurance') }}">
-					<i class="fa fa-certificate"></i></br>
-					<span class="title">Insurance</span>
-					</a>
-				</li>
-
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

@@ -174,6 +174,7 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 
 	Route::get('insurance',
 		array(
+			'before' => 'auth',
 			'uses'=>'DoctorController@insurance'
 			)
 		);

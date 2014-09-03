@@ -30,6 +30,7 @@ class DoctorController extends BaseController {
 		$view->countries 		= 	Country::all();
 		$view->provinces 		= 	Province::where('countryCode', '=', $doctor->address5)->get();
 		$view->cities 			= 	City::where('ProvinceCode', '=', $doctor->address5)->get();
+		$view->insurances 		= 	DoctorInsurance::where('doctor_id', '=', $id)->get();
 		return $view;
 	}
 
