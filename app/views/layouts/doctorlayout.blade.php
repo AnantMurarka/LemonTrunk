@@ -1,42 +1,29 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.1.1
-Version: 3.0.1
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en" class="no-js">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
-<meta charset="utf-8"/>
-<title>{{ $appTitle}} | Dashboard</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="" name="description"/>
-<meta content="" name="author"/>
-<link id="style_color" href="{{ URL::to('assets/admin/layout/css/themes/light2.css') }}" rel="stylesheet" type="text/css"/>
-@yield('head')
+	<meta charset="utf-8">
+ 	<title>{{ Config::get('app.Name') }}</title>	
+ 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+ 	<meta content="Medzoc" name="title">
+  	<meta content="Medical care search engine and booking" name="description">
+ 	<meta content="Doctor Search" name="keywords">
+  	<meta content="Hospital Search" name="keywords">
+ 	 <meta content="Booking Search" name="keywords">
+ 	<meta content="teknolohiya.ph" name="author">	
+ 	<meta property="og:medzoc.com" content="-CUSTOMER VALUE-">
+ 	<meta property="og:medzoc" content="-CUSTOMER VALUE-">
+ 	<meta property="og:description" content="-CUSTOMER VALUE-">
+ 	<meta property="og:type" content="website">
+ 	<meta property="og:image" content="-CUSTOMER VALUE-"><!-- link to image for socio -->
+ 	<meta property="og:url" content="-CUSTOMER VALUE-">	
+ 	<link rel="shortcut icon" href="favicon.ico">	
+	<link id="style_color" href="{{ URL::to('assets/admin/layout/css/themes/light2.css') }}" rel="stylesheet" type="text/css"/>
+
+	@yield('head')
 </head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
-<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
-<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
-<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
-<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
-<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
-<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
-<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
-<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
-<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-header-fixed page-sidebar-fixed page-sidebar-closed-hide-logo">
 <!-- BEGIN HEADER -->
 <div class="page-header navbar navbar-fixed-top">
@@ -532,7 +519,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2014 &copy; {{ $appTitle }} by Teknolohiya.
+		 2014 &copy; {{ Config::get('app.Name') }} by Teknolohiya.
 	</div>
 	<div class="page-footer-tools">
 		<span class="go-top">

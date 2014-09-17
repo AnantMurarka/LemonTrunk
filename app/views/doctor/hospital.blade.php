@@ -21,27 +21,10 @@
 	<link href="{{ URL::to('assets/admin/layout/css/layout.css') }}" rel="stylesheet" type="text/css"/>
 	<link href="{{ URL::to('assets/admin/layout/css/custom.css') }}" rel="stylesheet" type="text/css"/>
 	<!-- END THEME STYLES -->
-	<link rel="shortcut icon" href="favicon.ico"/>
-
 	<script src="{{ URL::to('assets/global/plugins/jquery-1.11.0.min.js') }}" type="text/javascript"></script>
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/data-tables/jquery.dataTables.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/data-tables/tabletools/js/dataTables.tableTools.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/data-tables/DT_bootstrap.js') }}"></script>
-
-	<script type="text/javascript" charset='utf-8'>
-		// var url = "{{ URL::route('dt_hospital_all') }}";
-		// $(document).ready(function() {
-		//     $('#hospitallist').dataTable( {
-		//     	"bProcessing": true,
-		//         "bServerSide": true,
-		//         "bFilter": true,
-  //   			"bSort": true,
-  //   			"sAjaxSource": url,
-  //   			"sServerMethod": "GET"
-		//     }
-		//     	);
-		// } );
-	</script>
 @stop
 
 @section('content')
@@ -50,7 +33,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-11">
-					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
 					<h3 class="page-title">
 					
 					</h3>
@@ -96,7 +78,7 @@
 							</div>
 							<div class="portlet-body radius">
 							 	<div class="form-group">
-									<input type="text" id="hospital_id" name='hospital_id' class="form-control" placeholder="Search" onkeyup="call()">
+									<input type="text" id="hospital_id" name='query' class="form-control" placeholder="Search" onkeyup="call()">
 								</div>
 								<div class="form-actions right">
 									<button type="submit" class="btn dark"><i class="fa fa-search"></i> Search</button>
@@ -105,48 +87,71 @@
 						</div>
 
 						<!-- BEGIN HOSPITAL LIST -->
-
-						<div class="portlet box radius">
-							<div class="portlet-body radius">
-							 	<div class="row">
-							 		<div class="col-md-3">
-							 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
-							 		</div>
-							 		<div class="col-md-8">
-							 			<div class="bar-name">-    </div>
-							 			<div class="bar-address">-    </div>
-							 			<div class="form-actions right">
-											<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
-										</div>
-							 		</div>
-							 	</div>
-							 	<div class="row">
-							 		<div class="col-md-12">
-							 			<div class="bar-description"><p>-</p><p>-</p><p>-</p><p>-</p></div>
-							 		</div>
-							 	</div>
+						<div id="hospitalList"> 
+							<div class="portlet box radius">
+								<div class="portlet-body radius">
+								 	<div class="row">
+								 		<div class="col-md-3">
+								 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
+								 		</div>
+								 		<div class="col-md-8">
+								 			<div class="bar-name">-    </div>
+								 			<div class="bar-address">-    </div>
+								 			<div class="form-actions right">
+												<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
+											</div>
+								 		</div>
+								 	</div>
+								 	<div class="row">
+								 		<div class="col-md-12">
+								 			<div class="bar-description"><p>-</p><p>-</p><p>-</p><p>-</p></div>
+								 		</div>
+								 	</div>
+								</div>
 							</div>
-						</div>
+	
+							<div class="portlet box radius">
+								<div class="portlet-body radius">
+								 	<div class="row">
+								 		<div class="col-md-3">
+								 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
+								 		</div>
+								 		<div class="col-md-8">
+								 			<div class="bar-name">.    </div>
+								 			<div class="bar-address">.    </div>
+								 			<div class="form-actions right">
+												<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
+											</div>
+								 		</div>
+								 	</div>
+								 	<div class="row">
+								 		<div class="col-md-12">
+								 			<div class="bar-description"><p>.</p><p>.</p><p>.</p><p>.</p></div>
+								 		</div>
+								 	</div>
+								</div>
+							</div>
 
-						<div class="portlet box radius">
-							<div class="portlet-body radius">
-							 	<div class="row">
-							 		<div class="col-md-3">
-							 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
-							 		</div>
-							 		<div class="col-md-8">
-							 			<div class="bar-name">.    </div>
-							 			<div class="bar-address">.    </div>
-							 			<div class="form-actions right">
-											<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
-										</div>
-							 		</div>
-							 	</div>
-							 	<div class="row">
-							 		<div class="col-md-12">
-							 			<div class="bar-description"><p>.</p><p>.</p><p>.</p><p>.</p></div>
-							 		</div>
-							 	</div>
+							<div class="portlet box radius">
+								<div class="portlet-body radius">
+								 	<div class="row">
+								 		<div class="col-md-3">
+								 			<img src="{{ URL::to('assets/frontend/layout/img/default/hospital-100px.png') }}">
+								 		</div>
+								 		<div class="col-md-8">
+								 			<div class="bar-name">.    </div>
+								 			<div class="bar-address">.    </div>
+								 			<div class="form-actions right">
+												<button type="submit" class="btn default"><i class="fa fa-external-link"></i> Link to me!</button>
+											</div>
+								 		</div>
+								 	</div>
+								 	<div class="row">
+								 		<div class="col-md-12">
+								 			<div class="bar-description"><p>.</p><p>.</p><p>.</p><p>.</p></div>
+								 		</div>
+								 	</div>
+								</div>
 							</div>
 						</div>
 						<!-- END HOSPITAL LIST -->
@@ -207,15 +212,13 @@
 	
 	<!-- BEGIN CORE PLUGINS -->
 	<!--[if lt IE 9]>
-	<script src="../assets/global/plugins/respond.min.js"></script>
-	<script src="../assets/global/plugins/excanvas.min.js"></script> 
 	<![endif]-->
+	<script src="{{ URL::to('assets/admin/pages/scripts/doctor-hospital.js') }}"></script>
+
 	<script src="{{ URL::to('assets/global/plugins/jquery-migrate-1.2.1.min.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/global/plugins/jquery.cokie.min.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
 	<!-- END CORE PLUGINS -->
 	
@@ -223,16 +226,13 @@
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/select2/select2.min.js') }}"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/gmaps/gmaps.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/maps-google.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::to('assets/admin/components/scripts/maps-google.js') }}" type="text/javascript"></script>
 
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/table-advanced.js') }}"></script>
-	<!-- <script src="{{ URL::to('assets/admin/pages/scripts/hospital-list.js') }}"></script> -->
-	
-	
+	<script src="{{ URL::to('assets/admin/components/scripts/table-advanced.js') }}"></script>
 	<script>
 	
 	function mapMarker()
@@ -242,7 +242,7 @@
 	        lat: 14.555084,
 	        lng: 121.047669,
 	        color: 'blue',
-	        zoom: 12,
+	        zoom: 8,
 	    });
 	    var maps = new Array();
 		<?php foreach($myHospitals as $hospital){ ?>
@@ -263,14 +263,11 @@
 	    	});
 	   	}
 	}
-	
 	jQuery(document).ready(function() 
-	{       
-	   	// initiate layout and plugins
-	   	Metronic.init(); // init metronic core components
-		Layout.init(); // init current layout
+	{
+	   	Metronic.init();
+		Layout.init();
 		TableAdvanced.init();
-		// MapsGoogle.init();
 		mapMarker();
 	});
 

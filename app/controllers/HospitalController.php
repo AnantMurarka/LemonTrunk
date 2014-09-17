@@ -4,18 +4,25 @@ class HospitalController extends BaseController {
 
 	public function hospitalList()
 	{
-		return Datatable::collection(HospitalList::hospitalsList())
-		->showColumns('id','name', 'type', 'City', 'contact')
-        ->searchColumns('name', 'Address1', 'Address2', 'City', 'province')
-        ->make();
+		$data = HospitalList::join('Cities', 'Cities.id', '=', 'hospital_list.Address3')
+		->join('Province', 'Province.id', '=', 'hospital_list.Address4')
+		->orderBy(DB::raw('RAND()'))->take(5)
+		->get();
+		return Response::json($data);
 	}
 
-	public function autoFill()
+	public function searchHospital()
 	{
 		$input = Input::all();
 
-		return Response::json( HospitalList::where('name', 'LIKE', '%'. $input['name'] .'%')->get() );
-		// return Response::json(array('message' => 'success'));
+		$data = HospitalList::join('Cities', 'Cities.id', '=', 'hospital_list.Address3')
+		->join('Province', 'Province.id', '=', 'hospital_list.Address4')
+		->where('name', 'LIKE', '%'.$input['query'].'%')
+		->orWhere('City', 'LIKE', '%'.$input['query'].'%')
+		->orWhere('province', 'LIKE', '%'.$input['query'].'%')
+		->take(5)
+		->get();
+		return Response::json($data);
 	}
-
+	
 }

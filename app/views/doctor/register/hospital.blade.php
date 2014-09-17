@@ -19,7 +19,7 @@
 	<!-- END:File Upload Plugin CSS files-->
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
-	<link href="{{ URL::to('assets/admin/pages/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
+	<link href="{{ URL::to('assets/admin/components/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" href="{{ URL::to('assets/global/plugins/select2/select2.css') }}"/>
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN THEME STYLES -->
@@ -49,9 +49,6 @@
 						<span>Actions</span><i class="fa fa-angle-down"></i>
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
-							<li>
-								<a href="{{ URL::to('doctor/register/myhospital') }}">Link a hospital</a>
-							</li>
 							<li>
 								<a href="{{ URL::to('doctor/hospital') }}">Back</a>
 							</li>
@@ -267,9 +264,9 @@
 	<!-- END: Page level plugins -->
 	<script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/inbox.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::to('assets/admin/components/scripts/inbox.js') }}" type="text/javascript"></script>
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/select2/select2.min.js') }}"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/form-samples.js') }}"></script>
+	<script src="{{ URL::to('assets/admin/components/scripts/form-samples.js') }}"></script>
 	<script>
 	jQuery(document).ready(function() {       
 	   // initiate layout and plugins

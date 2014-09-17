@@ -30,7 +30,7 @@
 	
   	<!-- BEGIN PAGE LEVEL STYLES -->
   	{{ HTML::style('assets/global/plugins/select2/select2.css') }}
-  	{{ HTML::style('assets/admin/pages/css/login-soft.css')}}
+  	{{ HTML::style('assets/admin/components/css/login-soft.css')}}
   	<!-- END PAGE LEVEL SCRIPTS -->
 	
  	<!-- Theme styles START -->
@@ -338,8 +338,8 @@
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="{{ URL::to ('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to ('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to ('assets/admin/pages/scripts/form-wizard.js') }}"></script>
-	<script src="{{ URL::to ('assets/admin/pages/scripts/form-samples.js') }}"></script>
+	<script src="{{ URL::to ('assets/admin/components/scripts/form-wizard.js') }}"></script>
+	<script src="{{ URL::to ('assets/admin/components/scripts/form-samples.js') }}"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script>
 	// jQuery(document).ready(function() {       

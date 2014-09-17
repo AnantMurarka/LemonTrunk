@@ -17,7 +17,7 @@
 	<!-- END:File Upload Plugin CSS files-->
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
-	<link href="{{ URL::to('assets/admin/pages/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
+	<link href="{{ URL::to('assets/admin/components/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN THEME STYLES -->
 	<link href="{{ URL::to('assets/global/css/components.css') }}" rel="stylesheet" type="text/css"/>

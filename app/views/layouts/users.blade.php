@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>{{ $appTitle }} | Dashboard</title>
+<title>{{ Config::get('app.Name') }} | Dashboard</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="" name="description"/>
@@ -1135,7 +1135,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2014 &copy; {{$appTitle}} by Teknolohiya.
+		 2014 &copy; {{Config::get('app.Name')}} by Teknolohiya.
 	</div>
 	<div class="page-footer-tools">
 		<span class="go-top">

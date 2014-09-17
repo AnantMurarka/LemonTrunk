@@ -193,4 +193,7 @@ return array(
 
 	),
 
+	'Name' => 'Medzoc',
+	'Version' => '1.0.0',
+
 );

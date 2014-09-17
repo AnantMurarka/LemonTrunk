@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Doc Search Project | Email Verification</title>
+<title>Medzoc Project | Email Verification</title>
 <!--IMPORTANT: 
 Before deploying this email template into your application make sure you convert all the css code in <style> tag using http://beaker.mailchimp.com/inline-css.
 Chrome and other few mail clients do not support <style> tag so the above converter from mailchip will make sure that all the css code will be converted into inline css.
@@ -860,27 +860,27 @@ Chrome and other few mail clients do not support <style> tag so the above conver
 										<tr>
 											<td class="vertical-middle">
 												<a href="#">
-												<img src="{{ URL::to('assets/admin/pages/media/email/social_facebook.png') }}" alt="social icon" class="radius"/>
+												<img src="{{ URL::to('assets/admin/components/media/email/social_facebook.png') }}" alt="social icon" class="radius"/>
 												</a>
 											</td>
 											<td class="vertical-middle">
 												<a href="#">
-												<img src="{{ URL::to('assets/admin/pages/media/email/social_twitter.png') }}" alt="social icon" class="radius"/>
+												<img src="{{ URL::to('assets/admin/components/media/email/social_twitter.png') }}" alt="social icon" class="radius"/>
 												</a>
 											</td>
 											<td class="vertical-middle">
 												<a href="#">
-												<img src="{{ URL::to('assets/admin/pages/media/email/social_googleplus.png') }}" alt="social icon" class="radius"/>
+												<img src="{{ URL::to('assets/admin/components/media/email/social_googleplus.png') }}" alt="social icon" class="radius"/>
 												</a>
 											</td>
 											<td class="vertical-middle">
 												<a href="#">
-												<img src="{{ URL::to('assets/admin/pages/media/email/social_linkedin.png') }}" alt="social icon" class="radius"/>
+												<img src="{{ URL::to('assets/admin/components/media/email/social_linkedin.png') }}" alt="social icon" class="radius"/>
 												</a>
 											</td>
 											<td class="vertical-middle">
 												<a href="#">
-												<img src="{{ URL::to('assets/admin/pages/media/email/social_rss.png') }}" alt="social icon" class="radius"/>
+												<img src="{{ URL::to('assets/admin/components/media/email/social_rss.png') }}" alt="social icon" class="radius"/>
 												</a>
 											</td>
 										</tr>
@@ -911,7 +911,7 @@ Chrome and other few mail clients do not support <style> tag so the above conver
 						<table class="twelve columns">
 						<tr>
 							<td>
-								<h4>Welcome To Doc Search </h4>
+								<h4>Welcome To Medzoc </h4>
 								<p>
 									 Kindly click the URL below to verify your account
 								</p>
@@ -974,7 +974,7 @@ Chrome and other few mail clients do not support <style> tag so the above conver
                                     <table class="five columns">
                                     <tr>
                                           <td>
-                                                <img src="{{ URL::to('assets/admin/pages/media/email/iphone.png') }}" style="float:right; margin-right: 20px;" alt=""/>
+                                                <img src="{{ URL::to('assets/admin/components/media/email/iphone.png') }}" style="float:right; margin-right: 20px;" alt=""/>
                                           </td>
                                           <td class="expander">
                                           </td>

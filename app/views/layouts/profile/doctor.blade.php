@@ -27,7 +27,7 @@
 						<div class="col-md-3">
 							<ul class="list-unstyled profile-nav">
 								<li>
-									<img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt=""/>
+									<img src="../../assets/admin/components/media/profile/profile-img.png" class="img-responsive" alt=""/>
 									<a href="#" class="profile-edit">
 									edit </a>
 								</li>
@@ -880,7 +880,7 @@
 					<div class="row portfolio-block">
 						<div class="col-md-5">
 							<div class="portfolio-text">
-								<img src="../../assets/admin/pages/media/profile/logo_metronic.jpg" alt=""/>
+								<img src="../../assets/admin/components/media/profile/logo_metronic.jpg" alt=""/>
 								<div class="portfolio-text-info">
 									<h4>Metronic - Responsive Template</h4>
 									<p>
@@ -915,7 +915,7 @@
 					<!--end row-->
 					<div class="row portfolio-block">
 						<div class="col-md-5 col-sm-12 portfolio-text">
-							<img src="../../assets/admin/pages/media/profile/logo_azteca.jpg" alt=""/>
+							<img src="../../assets/admin/components/media/profile/logo_azteca.jpg" alt=""/>
 							<div class="portfolio-text-info">
 								<h4>Metronic - Responsive Template</h4>
 								<p>
@@ -947,7 +947,7 @@
 					<!--end row-->
 					<div class="row portfolio-block">
 						<div class="col-md-5 portfolio-text">
-							<img src="../../assets/admin/pages/media/profile/logo_conquer.jpg" alt=""/>
+							<img src="../../assets/admin/components/media/profile/logo_conquer.jpg" alt=""/>
 							<div class="portfolio-text-info">
 								<h4>Metronic - Responsive Template</h4>
 								<p>

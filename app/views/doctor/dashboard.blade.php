@@ -19,7 +19,7 @@
 	<!-- END:File Upload Plugin CSS files-->
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
-	<link href="{{ URL::to('assets/admin/pages/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
+	<link href="{{ URL::to('assets/admin/components/css/inbox.css') }}" rel="stylesheet" type="text/css"/>
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN THEME STYLES -->
 	<link href="{{ URL::to('assets/global/css/components.css') }}" rel="stylesheet" type="text/css"/>
@@ -28,7 +28,6 @@
 	
 	<link href="{{ URL::to('assets/admin/layout/css/custom.css') }}" rel="stylesheet" type="text/css"/>
 	<!-- END THEME STYLES -->
-	<link rel="shortcut icon" href="favicon.ico"/>
 @stop
 
 @section('content')
@@ -117,7 +116,7 @@
 	<!-- END: Page level plugins -->
 	<script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/inbox.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::to('assets/admin/components/scripts/inbox.js') }}" type="text/javascript"></script>
 	<script>
 	jQuery(document).ready(function() {       
 	   // initiate layout and plugins

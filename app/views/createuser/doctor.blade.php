@@ -19,7 +19,7 @@
 	
   	<!-- BEGIN PAGE LEVEL STYLES -->
   	{{ HTML::style('assets/global/plugins/select2/select2.css')}}
-  	{{ HTML::style('assets/admin/pages/css/login-soft.css')}}
+  	{{ HTML::style('assets/admin/components/css/login-soft.css')}}
   	<!-- END PAGE LEVEL SCRIPTS -->
 	
  	<!-- Theme styles START -->
@@ -159,11 +159,11 @@
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     {{ HTML::script('assets/global/scripts/metronic.js') }}
-    {{ HTML::script('assets/admin/pages/scripts/login-soft.js') }}
+    {{ HTML::script('assets/admin/components/scripts/login-soft.js') }}
     <!-- END PAGE LEVEL SCRIPTS -->
 
     {{ HTML::script('assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}
-    {{ HTML::script('assets/admin/pages/scripts/login.js') }}
+    {{ HTML::script('assets/admin/components/scripts/login.js') }}
 
     {{ HTML::script('assets/admin/layout/scripts/layout.js') }}
     <script type="text/javascript">

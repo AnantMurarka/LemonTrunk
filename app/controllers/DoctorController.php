@@ -15,7 +15,7 @@ class DoctorController extends BaseController {
 	public function profile()
 	{
 		/* Initialization */
-		$id = Auth::doctor()->get()->id;
+		$id 					= 	Auth::doctor()->get()->id;
 		$view 					=	View::make('doctor.profile', array());
 		$view->appTitle 		=	$this->appTitle;
 		
@@ -37,21 +37,20 @@ class DoctorController extends BaseController {
 	public function hospital()
 	{
 		/* Initialization */
-		$id 					= Auth::doctor()->get()->id;
+		$id 					= 	Auth::doctor()->get()->id;
 		$view 					=	View::make('doctor.hospital', array());
-		$view->appTitle 		=	$this->appTitle;
 		$view->myHospitals 		= 	Doctor::doctorHospital($id);
 		return $view;
 	}
 
-	public function myHospital()
-	{
-		/* Initialization */
-		$id 					= Auth::doctor()->get()->id;
-		$view 					=	View::make('doctor.register.myhospital', array());
-		$view->appTitle 		=	$this->appTitle;
-		return $view;
-	}
+	// public function myHospital()
+	// {
+	// 	/* Initialization */
+	// 	$id 					= 	Auth::doctor()->get()->id;
+	// 	$view 					=	View::make('doctor.register.myhospital', array());
+	// 	$view->appTitle 		=	$this->appTitle;
+	// 	return $view;
+	// }
 
 	public function specialization()
 	{
@@ -85,7 +84,7 @@ class DoctorController extends BaseController {
 	public function tasker()
 	{
 		/* Initialization */
-		$id 					= Auth::doctor()->get()->id;
+		$id 					= 	Auth::doctor()->get()->id;
 		$view 					=	View::make('doctor.tasker', array());
 		$view->appTitle 		=	$this->appTitle;
 		return $view;

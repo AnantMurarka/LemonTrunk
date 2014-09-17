@@ -19,7 +19,7 @@
 	
   	<!-- BEGIN PAGE LEVEL STYLES -->
   	{{ HTML::style('assets/global/plugins/select2/select2.css')}}
-  	{{ HTML::style('assets/admin/pages/css/login-soft.css')}}
+  	{{ HTML::style('assets/admin/components/css/login-soft.css')}}
   	<!-- END PAGE LEVEL SCRIPTS -->
 	
  	<!-- Theme styles START -->
@@ -162,7 +162,7 @@
 					<em><i class="fa fa-user-md red"></i></em>
 					<span>Register as a Doctor</span>
 				</div>
-				<p>Use our system to manage your patients. View their medical history and threatment from other doctors to help you give a better understanting to their current health issues. Manage their appointment schedule. Let them communicate with via {{$appTitle}} messaging service. Be recommended by your patient to increase your patients visits to your private clinic.</p>
+				<p>Use our system to manage your patients. View their medical history and threatment from other doctors to help you give a better understanting to their current health issues. Manage their appointment schedule. Let them communicate with via {{Config::get('app.url')}} messaging service. Be recommended by your patient to increase your patients visits to your private clinic.</p>
 			</div>
 			<div class="col-md-3 col-sm-3">
 				<div class="service-box-heading">
@@ -415,11 +415,11 @@
 
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     {{ HTML::script('assets/global/scripts/metronic.js') }}
-    {{ HTML::script('assets/admin/pages/scripts/login-soft.js') }}
+    {{ HTML::script('assets/admin/components/scripts/login-soft.js') }}
     <!-- END PAGE LEVEL SCRIPTS -->
 
     {{ HTML::script('assets/global/plugins/jquery-validation/js/jquery.validate.min.js') }}
-    {{ HTML::script('assets/admin/pages/scripts/login.js') }}
+    {{ HTML::script('assets/admin/components/scripts/login.js') }}
 
     {{ HTML::script('assets/frontend/layout/scripts/layout.js') }}
     <script type="text/javascript">

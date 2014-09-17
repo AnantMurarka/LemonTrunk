@@ -204,14 +204,14 @@
 	<script type="text/javascript" src="{{ URL::to('assets/global/plugins/select2/select2.min.js') }}"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/global/plugins/gmaps/gmaps.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/maps-google.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::to('assets/admin/components/scripts/maps-google.js') }}" type="text/javascript"></script>
 
 	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 	<script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-	<script src="{{ URL::to('assets/admin/pages/scripts/table-advanced.js') }}"></script>
-	<!-- <script src="{{ URL::to('assets/admin/pages/scripts/hospital-list.js') }}"></script> -->
+	<script src="{{ URL::to('assets/admin/components/scripts/table-advanced.js') }}"></script>
+	<!-- <script src="{{ URL::to('assets/admin/components/scripts/hospital-list.js') }}"></script> -->
 	
 	
 	<script>

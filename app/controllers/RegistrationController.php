@@ -99,12 +99,8 @@ class RegistrationController extends BaseController {
 
 		$input = Input::all();
 		$patient = Patient::where('id', '=', $input['patientID'])->get();
-		// var_dump($input['patientID']);
-		// die('test1');
 		$id = $patient[0]->id;
 		$url = URL::to('createuser/verify/'.$patient[0]->confirmation_token).'/'. $id;
-
-		/* send validation email */
 		$patient_v = array(
   			'email'		=>	$patient[0]->email,
   			'name'		=>	$patient[0]->firstname
@@ -267,10 +263,6 @@ class RegistrationController extends BaseController {
 		$hospital = DoctorHospital::where('hospital_id', '=', $input['hospital_id'])
 		->where('doctor_id', '=', Auth::doctor()->get()->id)
 		->get();
-
-		// var_dump(empty($hospital[0]));
-		// var_dump($hospital);
-		// die();
 
 		if (empty($hospital[0]))
 		{

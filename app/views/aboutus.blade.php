@@ -37,7 +37,7 @@
               <div class="row margin-bottom-30">
                 <!-- BEGIN INFO BLOCK -->               
                 <div class="col-md-7">
-                  <h2 class="no-top-space">{{$appTitle}}</h2>
+                  <h2 class="no-top-space">{{Config::get('app.Name')}}</h2>
                   <p>Is a project developed by Teknolohiya Philippines. It aims to provide doctors clinic gain more patient by making their clinic searchable. And for nurse gain more income by making them searchable and available for private nursing for patient in need for home service.</p> 
                   <p>Teknolohiya Philippines is tech business aiming to connect the world and make everything searchable and accesible online. To make daily living more easily using the power of technology.</p>
                   <!-- BEGIN LISTS -->

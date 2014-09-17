@@ -10,7 +10,8 @@
 |
 */
 
-
+Route::get('test',
+	array('uses'=>'HospitalController@hospitalList'));
 /* BEGIN FRONTEND routes */
 Route::get('/',
 	array('uses'=>'HomeController@index'));
@@ -227,16 +228,16 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 
 	/* Begin Hospital Registration */
 	Route::get('register/hospital',
-	array(
-		'uses'=>'DoctorController@registrationHospital'
-		)
-	);
+		array(
+			'uses'=>'DoctorController@registrationHospital'
+			)
+		);
 
 	Route::post('register/hospital',
-	array(
-		'uses'=>'RegistrationController@registerHospital'
-		)
-	);
+		array(
+			'uses'=>'RegistrationController@registerHospital'
+			)
+		);
 	/* End Hospital Registration */
 
 	/* Begin linking hospital */
@@ -247,18 +248,16 @@ Route::group(array('before' => 'auth', 'prefix'=>'doctor'), function(){
 	);
 	/* End linking hospital */
 
-	/* datatables */
+	/* API Calls */
 	Route::get('hospitallist',
-	array(
-		'as' => 'dt_hospital_all',
-		'uses'=>'HospitalController@hospitalList'
+		array(
+			'as' => 'hospital_random',
+			'uses'=>'HospitalController@hospitalList'
 		));
 
-	/* ajax calls */
-	Route::post('hospitalnames',
-	array(
-		'as' => 'fillhospitalname',
-		'uses'=>'HospitalController@autoFill'
+	Route::post('hospitallist',
+		array( 
+			'uses'=>'HospitalController@searchHospital'
 		));
 
 });

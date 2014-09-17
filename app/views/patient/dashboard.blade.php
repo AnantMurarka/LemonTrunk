@@ -19,7 +19,7 @@
 	<!-- END:File Upload Plugin CSS files-->
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN PAGE LEVEL STYLES -->
-	<link href="../assets/admin/pages/css/inbox.css" rel="stylesheet" type="text/css"/>
+	<link href="../assets/admin/components/css/inbox.css" rel="stylesheet" type="text/css"/>
 	<!-- END PAGE LEVEL STYLES -->
 	<!-- BEGIN THEME STYLES -->
 	<link href="../assets/global/css/components.css" rel="stylesheet" type="text/css"/>
@@ -101,7 +101,7 @@
 	<!-- END: Page level plugins -->
 	<script src="../assets/global/scripts/metronic.js" type="text/javascript"></script>
 	<script src="../assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
-	<script src="../assets/admin/pages/scripts/inbox.js" type="text/javascript"></script>
+	<script src="../assets/admin/components/scripts/inbox.js" type="text/javascript"></script>
 	<script>
 	jQuery(document).ready(function() {       
 	   // initiate layout and plugins

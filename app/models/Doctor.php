@@ -60,8 +60,6 @@ class Doctor extends Eloquent {
 		$doctor['language']			= 	Doctor::find($id)->language()
 										->join('language', 'language.id', '=', 'doctors_language.language_id')
 										->get(array('name'))->toArray();
-		// echo $doctor;
-		// die();
 		return $doctor;
 	}
 

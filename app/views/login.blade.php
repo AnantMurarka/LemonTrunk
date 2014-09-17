@@ -22,7 +22,7 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link href="assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css"/>
 <link href="assets/global/plugins/select2/select2-metronic.css" rel="stylesheet" type="text/css"/>
-<link href="assets/admin/pages/css/login-soft.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/components/css/login-soft.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME STYLES -->
 <link href="assets/global/css/components.css" rel="stylesheet" type="text/css"/>
@@ -185,7 +185,7 @@
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
-<script src="assets/admin/pages/scripts/login-soft.js" type="text/javascript"></script>
+<script src="assets/admin/components/scripts/login-soft.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 		jQuery(document).ready(function() {     

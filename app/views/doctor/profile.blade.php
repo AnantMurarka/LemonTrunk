@@ -11,7 +11,7 @@
 <!-- END GLOBAL MANDATORY STYLES -->
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link href="{{ URL::to('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css') }}" rel="stylesheet" type="text/css"/>
-<link href="{{ URL::to('assets/admin/pages/css/profile.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ URL::to('assets/admin/components/css/profile.css') }}" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="{{ URL::to('assets/global/plugins/data-tables/DT_bootstrap.css') }}"/>
 <!-- END PAGE LEVEL STYLES -->
 <!-- BEGIN THEME STYLES -->
@@ -82,7 +82,7 @@
 						<div class="col-md-3">
 							<ul class="list-unstyled profile-nav padding">
 								<li>
-									<img src="{{ URL::to('assets/admin/pages/media/profile/profile-img.png' ) }}" class="img-responsive" alt=""/>
+									<img src="{{ URL::to('assets/admin/components/media/profile/profile-img.png' ) }}" class="img-responsive" alt=""/>
 									<a href="#" class="profile-edit">
 									edit </a>
 								</li>
@@ -234,11 +234,6 @@
 																		</div>
 																	</div>
 																</div>
-																<!-- <div class="col2">
-																	<div class="date">
-																		 21 Hours
-																	</div>
-																</div> -->
 															</li>
 															<?php
 														}
@@ -247,15 +242,6 @@
 											</ul>
 										</div>
 									</div>
-									<!--tab-pane-->
-									<!-- <div class="tab-pane" id="tab_1_22">
-										<div class="scroller" data-height="290px" data-always-visible="1" data-rail-visible1="1">
-											<div class="col-md-8">
-												
-											</div>
-										</div>
-									</div> -->
-									<!--tab-pane-->
 								</div>
 							</div>
 						</div>
@@ -281,10 +267,6 @@
 									<a data-toggle="tab" href="#tab_3-3">
 									<i class="fa fa-lock"></i> Change Password </a>
 								</li>
-								<!-- <li>
-									<a data-toggle="tab" href="#tab_4-4">
-									<i class="fa fa-lock"></i> Professional info </a>
-								</li> -->
 								<li>
 									<a data-toggle="tab" href="#tab_5-5">
 									<i class="fa fa-eye"></i> Privacity Settings </a>
@@ -1062,12 +1044,12 @@
 <!-- Maps -->
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script src="{{ URL::to('assets/global/plugins/gmaps/gmaps.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('assets/admin/pages/scripts/maps-google.js') }}" type="text/javascript"></script>
+<script src="{{ URL::to('assets/admin/components/scripts/maps-google.js') }}" type="text/javascript"></script>
 
 <script src="{{ URL::to('assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
 <script src="{{ URL::to('assets/admin/layout/scripts/layout.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('assets/admin/pages/scripts/form-samples.js') }}"></script>
-<script src="{{ URL::to('assets/admin/pages/scripts/table-editable.js') }}"></script>
+<script src="{{ URL::to('assets/admin/components/scripts/form-samples.js') }}"></script>
+<script src="{{ URL::to('assets/admin/components/scripts/table-editable.js') }}"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 
@@ -1109,11 +1091,10 @@
 
 	jQuery(document).ready(function() 
 	{       
-	   	// initiate layout and plugins
-		Metronic.init();	// init metronic core components
-		mapMarker();	// init for google map
-		Layout.init();		// init current layout
-		FormSamples.init(); // init forms
+		Metronic.init();
+		mapMarker();
+		Layout.init();
+		FormSamples.init();
 		TableEditable.init();
 	});
 
@@ -1129,7 +1110,6 @@
 	{
 		loadCity('{{$doctor->address4}}');
 	}
-	
 
 	$('#specializationList').multiSelect({ 
 		keepOrder: true
